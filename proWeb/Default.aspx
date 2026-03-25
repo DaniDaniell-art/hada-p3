@@ -1,54 +1,79 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="proWeb.Default" %>
+﻿using System;
+using System.Collections.Generic;
+// ¡Muy importante añadir esta línea para poder usar las clases de tu librería!
+using library; 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    </asp:Content>
+namespace proWeb
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // IsPostBack comprueba si es la primera vez que entramos a la página.
+            // Si es la primera vez, cargamos el desplegable. Si venimos de pulsar un botón, no lo recargamos.
+            if (!IsPostBack)
+            {
+                CADCategory cadCat = new CADCategory();
+                List<ENCategory> categorias = cadCat.readAll(); 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Products management</h2> [cite: 156]
-    
-    <table style="width: 100%;">
-        <tr>
-            <td>Code</td>
-            <td><asp:TextBox ID="tbCode" runat="server" MaxLength="16"></asp:TextBox></td> [cite: 157, 189]
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td><asp:TextBox ID="tbName" runat="server" MaxLength="32"></asp:TextBox></td> [cite: 158, 190]
-        </tr>
-        <tr>
-            <td>Amount</td>
-            <td><asp:TextBox ID="tbAmount" runat="server" TextMode="Number"></asp:TextBox></td> [cite: 159, 191]
-        </tr>
-        <tr>
-            <td>Category</td>
-            <td>
-                <asp:DropDownList ID="ddlCategory" runat="server">
-                    <asp:ListItem Value="0">Computing</asp:ListItem> [cite: 197]
-                    <asp:ListItem Value="1">Telephony</asp:ListItem> [cite: 197]
-                    <asp:ListItem Value="2">Gaming</asp:ListItem> [cite: 197]
-                    <asp:ListItem Value="3">Home appliances</asp:ListItem> [cite: 197]
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr>
-            <td>Price</td>
-            <td><asp:TextBox ID="tbPrice" runat="server"></asp:TextBox></td> [cite: 161, 192]
-        </tr>
-        <tr>
-            <td>Creation Date</td>
-            <td><asp:TextBox ID="tbDate" runat="server"></asp:TextBox></td> [cite: 162, 196]
-        </tr>
-    </table>
+                // Si la lista tiene datos, la vinculamos a tu DropDownList
+                if(categorias != null && categorias.Count > 0)
+                {
+                    ddlCategory.DataSource = categorias;
+                    ddlCategory.DataTextField = "Name"; // Lo que lee el usuario (ej: Computing)
+                    ddlCategory.DataValueField = "Id";  // El valor numérico interno que se guarda
+                    ddlCategory.DataBind();
+                }
+            }
+        }
 
-    <br />
-    <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click" /> [cite: 163]
-    <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" /> [cite: 164]
-    <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" /> [cite: 165]
-    <asp:Button ID="btnRead" runat="server" Text="Read" OnClick="btnRead_Click" /> [cite: 166]
-    <asp:Button ID="btnReadFirst" runat="server" Text="Read First" OnClick="btnReadFirst_Click" /> [cite: 167]
-    <asp:Button ID="btnReadPrev" runat="server" Text="Read Prev" OnClick="btnReadPrev_Click" /> [cite: 168]
-    <asp:Button ID="btnReadNext" runat="server" Text="Read Next" OnClick="btnReadNext_Click" /> [cite: 168]
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Recogemos lo que el usuario ha escrito en las cajas de texto y lo convertimos a su tipo correspondiente
+                string code = tbCode.Text;
+                string name = tbName.Text;
+                int amount = int.Parse(tbAmount.Text);
+                float price = float.Parse(tbPrice.Text);
+                int category = int.Parse(ddlCategory.SelectedValue);
+                DateTime creationDate = DateTime.Parse(tbDate.Text);
 
-    <br /><br />
-    <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red"></asp:Label> [cite: 186]
-</asp:Content>
+                // 2. Creamos nuestro objeto Producto de la capa de negocio
+                ENProduct producto = new ENProduct(code, name, amount, price, category, creationDate);
+
+                // 3. Intentamos guardarlo en la Base de Datos
+                if (producto.create())
+                {
+                    lblMessage.Text = "Success: Product created correctly.";
+                    lblMessage.ForeColor = System.Drawing.Color.Green; // Mensaje de éxito en verde
+                }
+                else
+                {
+                    lblMessage.Text = "Error: Could not create the product.";
+                    lblMessage.ForeColor = System.Drawing.Color.Red; // Mensaje de error en rojo
+                }
+            }
+            catch (Exception ex)
+            {
+                // Si el usuario deja un campo vacío o pone texto donde va un número, capturamos el error aquí
+                lblMessage.Text = "Format error: Please check your input data. " + ex.Message;
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        // --- LOS DEMÁS BOTONES LOS DEJAREMOS PREPARADOS PARA DESPUÉS ---
+
+        protected void btnUpdate_Click(object sender, EventArgs e) { }
+
+        protected void btnDelete_Click(object sender, EventArgs e) { }
+
+        protected void btnRead_Click(object sender, EventArgs e) { }
+
+        protected void btnReadFirst_Click(object sender, EventArgs e) { }
+
+        protected void btnReadPrev_Click(object sender, EventArgs e) { }
+
+        protected void btnReadNext_Click(object sender, EventArgs e) { }
+    }
+}

@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\danie\\source\\repos\\hada-p3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\source\\repos\\hada-p3\\library\\ENProduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:library\\ENProduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\library\\cadproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|solutionrelative:library\\cadproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADProduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:library\\CADProduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|c:\\users\\danie\\source\\repos\\hada-p3\\library\\enproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|solutionrelative:library\\enproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\library\\encategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|solutionrelative:library\\encategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\library\\cadcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0139357-AAA6-41A4-B095-B76A5F6BE064}|library\\library.csproj|solutionrelative:library\\cadcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|c:\\users\\danie\\source\\repos\\hada-p3\\proweb\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\danie\\source\\repos\\hada-p3\\proweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CADProduct.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADProduct.cs",
-              "RelativeDocumentMoniker": "library\\CADProduct.cs",
-              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADProduct.cs",
-              "RelativeToolTip": "library\\CADProduct.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "proWeb\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Default.aspx.cs",
+              "RelativeToolTip": "proWeb\\Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T19:09:11.131Z",
+              "WhenOpened": "2026-03-25T21:01:45.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Default.aspx",
+              "RelativeDocumentMoniker": "proWeb\\Default.aspx",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Default.aspx",
+              "RelativeToolTip": "proWeb\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-03-25T20:50:25.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Site1.Master",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Site1.Master",
+              "RelativeDocumentMoniker": "proWeb\\Site1.Master",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Site1.Master",
+              "RelativeToolTip": "proWeb\\Site1.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-03-25T20:47:20.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Web.config",
+              "RelativeDocumentMoniker": "proWeb\\Web.config",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\proWeb\\Web.config",
+              "RelativeToolTip": "proWeb\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-03-25T20:43:06.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CADCategory.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADCategory.cs",
+              "RelativeDocumentMoniker": "library\\CADCategory.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADCategory.cs",
+              "RelativeToolTip": "library\\CADCategory.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T20:42:49.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ENCategory.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\ENCategory.cs",
+              "RelativeDocumentMoniker": "library\\ENCategory.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\ENCategory.cs",
+              "RelativeToolTip": "library\\ENCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T20:42:22.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CADProduct.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADProduct.cs",
+              "RelativeDocumentMoniker": "library\\CADProduct.cs",
+              "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\CADProduct.cs",
+              "RelativeToolTip": "library\\CADProduct.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T20:40:39.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ENProduct.cs",
               "DocumentMoniker": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\ENProduct.cs",
               "RelativeDocumentMoniker": "library\\ENProduct.cs",
               "ToolTip": "C:\\Users\\danie\\source\\repos\\hada-p3\\library\\ENProduct.cs",
               "RelativeToolTip": "library\\ENProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T19:08:54.225Z",
+              "WhenOpened": "2026-03-25T20:40:08.86Z",
               "EditorCaption": ""
             }
           ]
