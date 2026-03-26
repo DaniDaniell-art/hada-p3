@@ -4,3 +4,9 @@ C:\Users\danie\source\repos\hada-p3\library\bin\Debug\library.dll
 C:\Users\danie\source\repos\hada-p3\library\bin\Debug\library.pdb
 C:\Users\danie\source\repos\hada-p3\library\obj\Debug\library.dll
 C:\Users\danie\source\repos\hada-p3\library\obj\Debug\library.pdb
+C:\Users\34636\source\repos\hada-p3\library\bin\Debug\library.dll
+C:\Users\34636\source\repos\hada-p3\library\bin\Debug\library.pdb
+C:\Users\34636\source\repos\hada-p3\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\34636\source\repos\hada-p3\library\obj\Debug\library.csproj.CoreCompileInputs.cache
+C:\Users\34636\source\repos\hada-p3\library\obj\Debug\library.dll
+C:\Users\34636\source\repos\hada-p3\library\obj\Debug\library.pdb

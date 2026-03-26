@@ -78,6 +78,15 @@ namespace proWeb
         protected global::System.Web.UI.WebControls.Button btnCreate;
 
         /// <summary>
+        /// Control btnRead.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRead;
+
+        /// <summary>
         /// Control btnUpdate.
         /// </summary>
         /// <remarks>
@@ -94,15 +103,6 @@ namespace proWeb
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
-
-        /// <summary>
-        /// Control btnRead.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRead;
 
         /// <summary>
         /// Control btnReadFirst.

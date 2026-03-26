@@ -85,10 +85,101 @@ namespace proWeb
             }
         }
 
-        protected void btnUpdate_Click(object sender, EventArgs e) { }
-        protected void btnDelete_Click(object sender, EventArgs e) { }
-        protected void btnReadFirst_Click(object sender, EventArgs e) { }
-        protected void btnReadPrev_Click(object sender, EventArgs e) { }
-        protected void btnReadNext_Click(object sender, EventArgs e) { }
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ENProduct p = new ENProduct(tbCode.Text, tbName.Text, int.Parse(tbAmount.Text),
+                                            float.Parse(tbPrice.Text), int.Parse(ddlCategory.SelectedValue),
+                                            DateTime.Parse(tbDate.Text));
+                if (p.update())
+                {
+                    lblMessage.Text = "Success: Product updated.";
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    lblMessage.Text = "Error: Could not update.";
+                }
+            }
+            catch (Exception ex) { lblMessage.Text = "Error: " + ex.Message; }
+        }
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Leemos el código de la caja de texto
+
+            if (p.delete())
+            {
+                lblMessage.Text = "Success: Product deleted.";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMessage.Text = "Error: Product not found.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+        protected void btnReadFirst_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            if (p.readFirst())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+                lblMessage.Text = "Success: First product loaded.";
+            }
+            else
+            {
+                lblMessage.Text = "No products found.";
+            }
+        }
+        protected void btnReadPrev_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Partimos del código que el usuario tiene ahora en pantalla
+
+            if (p.readPrev())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                // Formato de fecha exacto: dd/mm/aaaa hh:mm:ss
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+
+                lblMessage.Text = "Success: Previous product loaded.";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMessage.Text = "No previous products found.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+        protected void btnReadNext_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Empezamos desde el código que hay en pantalla
+            if (p.readNext())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+                lblMessage.Text = "Success: Next product loaded.";
+            }
+            else
+            {
+                lblMessage.Text = "No more products.";
+            }
+        }
     }
 }
