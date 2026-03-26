@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\34636\\source\\repos\\hada-p3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|c:\\users\\34636\\source\\repos\\hada-p3\\proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|c:\\users\\34636\\source\\repos\\hada-p3\\proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\34636\\source\\repos\\hada-p3\\proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\34636\\source\\repos\\hada-p3\\proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|solutionrelative:proweb\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFBD9206-86CC-43DD-8B13-57B168E7DD57}|proWeb\\proWeb.csproj|C:\\Users\\34636\\source\\repos\\hada-p3\\proweb\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -52,7 +52,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Site1.Master",
               "DocumentMoniker": "C:\\Users\\34636\\source\\repos\\hada-p3\\proWeb\\Site1.Master",
               "RelativeDocumentMoniker": "proWeb\\Site1.Master",
@@ -105,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\34636\\source\\repos\\hada-p3\\proWeb\\Default.aspx",
               "RelativeDocumentMoniker": "proWeb\\Default.aspx",
@@ -113,7 +113,8 @@
               "RelativeToolTip": "proWeb\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-03-25T20:50:25.621Z"
+              "WhenOpened": "2026-03-25T20:50:25.621Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
