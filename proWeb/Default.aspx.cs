@@ -120,8 +120,43 @@ namespace proWeb
                 lblMessage.ForeColor = System.Drawing.Color.Red;
             }
         }
-        protected void btnReadFirst_Click(object sender, EventArgs e) { }
+        protected void btnReadFirst_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            if (p.readFirst())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+                lblMessage.Text = "Success: First product loaded.";
+            }
+            else
+            {
+                lblMessage.Text = "No products found.";
+            }
+        }
         protected void btnReadPrev_Click(object sender, EventArgs e) { }
-        protected void btnReadNext_Click(object sender, EventArgs e) { }
+        protected void btnReadNext_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Empezamos desde el código que hay en pantalla
+            if (p.readNext())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+                lblMessage.Text = "Success: Next product loaded.";
+            }
+            else
+            {
+                lblMessage.Text = "No more products.";
+            }
+        }
     }
 }
