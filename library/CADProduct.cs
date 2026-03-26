@@ -128,8 +128,61 @@ namespace library
             return exito;
         }
 
-        public bool readFirst(ENProduct en) { return false; }
-        public bool readNext(ENProduct en) { return false; }
+        public bool readFirst(ENProduct en)
+        {
+            bool exito = false;
+            SqlConnection c = new SqlConnection(constring);
+            try
+            {
+                c.Open();
+                // SQL: Seleccionamos el primer registro ordenado por código
+                SqlCommand com = new SqlCommand("SELECT TOP 1 * FROM Products ORDER BY code ASC", c);
+                SqlDataReader dr = com.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    en.Code = dr["code"].ToString();
+                    en.Name = dr["name"].ToString();
+                    en.Amount = int.Parse(dr["amount"].ToString());
+                    en.Price = float.Parse(dr["price"].ToString());
+                    en.Category = int.Parse(dr["category"].ToString());
+                    en.CreationDate = DateTime.Parse(dr["creationDate"].ToString());
+                    exito = true;
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { Console.WriteLine("Product operation has failed. Error: {0}", ex.Message); }
+            finally { c.Close(); }
+            return exito;
+        }
+        public bool readNext(ENProduct en)
+        {
+            bool exito = false;
+            SqlConnection c = new SqlConnection(constring);
+            try
+            {
+                c.Open();
+                // Buscamos el primero cuyo código sea mayor al actual
+                SqlCommand com = new SqlCommand("SELECT TOP 1 * FROM Products WHERE code > @code ORDER BY code ASC", c);
+                com.Parameters.AddWithValue("@code", en.Code);
+                SqlDataReader dr = com.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    en.Code = dr["code"].ToString();
+                    en.Name = dr["name"].ToString();
+                    en.Amount = int.Parse(dr["amount"].ToString());
+                    en.Price = float.Parse(dr["price"].ToString());
+                    en.Category = int.Parse(dr["category"].ToString());
+                    en.CreationDate = DateTime.Parse(dr["creationDate"].ToString());
+                    exito = true;
+                }
+                dr.Close();
+            }
+            catch (SqlException ex) { Console.WriteLine("Product operation has failed. Error: {0}", ex.Message); }
+            finally { c.Close(); }
+            return exito;
+        }
         public bool readPrev(ENProduct en) { return false; }
     }
 }
