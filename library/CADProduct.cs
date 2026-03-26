@@ -53,7 +53,27 @@ namespace library
             return exito;
         }
 
-        public bool update(ENProduct en) { return false; }
+        public bool update(ENProduct en)
+        {
+            bool exito = false;
+            SqlConnection c = new SqlConnection(constring);
+            try
+            {
+                c.Open();
+                SqlCommand com = new SqlCommand("UPDATE Products SET name=@n, amount=@a, price=@p, category=@c, creationDate=@d WHERE code=@code", c);
+                com.Parameters.AddWithValue("@n", en.Name);
+                com.Parameters.AddWithValue("@a", en.Amount);
+                com.Parameters.AddWithValue("@p", en.Price);
+                com.Parameters.AddWithValue("@c", en.Category);
+                com.Parameters.AddWithValue("@d", en.CreationDate);
+                com.Parameters.AddWithValue("@code", en.Code);
+
+                if (com.ExecuteNonQuery() > 0) exito = true;
+            }
+            catch (SqlException ex) { Console.WriteLine("Product operation has failed. Error: {0}", ex.Message); }
+            finally { c.Close(); }
+            return exito;
+        }
         public bool delete(ENProduct en)
         {
             bool exito = false;
