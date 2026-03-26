@@ -138,7 +138,30 @@ namespace proWeb
                 lblMessage.Text = "No products found.";
             }
         }
-        protected void btnReadPrev_Click(object sender, EventArgs e) { }
+        protected void btnReadPrev_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Partimos del código que el usuario tiene ahora en pantalla
+
+            if (p.readPrev())
+            {
+                tbCode.Text = p.Code;
+                tbName.Text = p.Name;
+                tbAmount.Text = p.Amount.ToString();
+                tbPrice.Text = p.Price.ToString();
+                ddlCategory.SelectedValue = p.Category.ToString();
+                // Formato de fecha exacto: dd/mm/aaaa hh:mm:ss
+                tbDate.Text = p.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+
+                lblMessage.Text = "Success: Previous product loaded.";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMessage.Text = "No previous products found.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
         protected void btnReadNext_Click(object sender, EventArgs e)
         {
             ENProduct p = new ENProduct();
