@@ -54,7 +54,26 @@ namespace library
         }
 
         public bool update(ENProduct en) { return false; }
-        public bool delete(ENProduct en) { return false; }
+        public bool delete(ENProduct en)
+        {
+            bool exito = false;
+            SqlConnection c = new SqlConnection(constring);
+            try
+            {
+                c.Open();
+                // Borramos el producto que coincida con el código
+                SqlCommand com = new SqlCommand("DELETE FROM Products WHERE code = @code", c);
+                com.Parameters.AddWithValue("@code", en.Code);
+
+                if (com.ExecuteNonQuery() > 0) exito = true;
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Product operation has failed. Error: {0}", ex.Message);
+            }
+            finally { c.Close(); }
+            return exito;
+        }
 
         public bool read(ENProduct en)
         {
