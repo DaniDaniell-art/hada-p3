@@ -85,7 +85,25 @@ namespace proWeb
             }
         }
 
-        protected void btnUpdate_Click(object sender, EventArgs e) { }
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ENProduct p = new ENProduct(tbCode.Text, tbName.Text, int.Parse(tbAmount.Text),
+                                            float.Parse(tbPrice.Text), int.Parse(ddlCategory.SelectedValue),
+                                            DateTime.Parse(tbDate.Text));
+                if (p.update())
+                {
+                    lblMessage.Text = "Success: Product updated.";
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    lblMessage.Text = "Error: Could not update.";
+                }
+            }
+            catch (Exception ex) { lblMessage.Text = "Error: " + ex.Message; }
+        }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             ENProduct p = new ENProduct();
