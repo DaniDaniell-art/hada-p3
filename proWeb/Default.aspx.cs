@@ -86,7 +86,22 @@ namespace proWeb
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e) { }
-        protected void btnDelete_Click(object sender, EventArgs e) { }
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            ENProduct p = new ENProduct();
+            p.Code = tbCode.Text; // Leemos el código de la caja de texto
+
+            if (p.delete())
+            {
+                lblMessage.Text = "Success: Product deleted.";
+                lblMessage.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMessage.Text = "Error: Product not found.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+            }
+        }
         protected void btnReadFirst_Click(object sender, EventArgs e) { }
         protected void btnReadPrev_Click(object sender, EventArgs e) { }
         protected void btnReadNext_Click(object sender, EventArgs e) { }
